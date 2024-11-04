@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gestion de Magasin</title>
+</head>
+<body>
+
+    <h2>Gestion de Magasin - Transactions</h2>
+    <form id="transactionForm">
+        <label for="product">Nom du produit</label>
+        <br>
+        <select id="product" required>
+            <option value="Sac à main" data-price="150">Sac à main (150 MAD)</option>
+            <option value="Chemise" data-price="100">Chemise (100 MAD)</option>
+            <option value="Pantalon" data-price="100">Pantalon (100 MAD)</option>
+            <option value="Cravate" data-price="50">Cravate (50 MAD)</option>
+        </select>
+        <br>
+        <label for="quantity">Quantité</label>
+        <br>
+        <input type="number" id="quantity" min="1" value="1" required>
+        <br>
+        <label for="tva">TVA (%)</label>
+        <br>
+        <input type="number" id="tva" min="0" max="100" value="20" required>
+        <br>
+        <button type="button" onclick="addTransaction()">Ajouter au panier</button>
+    </form>
+
+    <table id="transactionTable">
+        <thead>
+            <tr>
+                <th>Produit</th>
+                <th>Prix unitaire (MAD)</th>
+                <th>Quantité</th>
+                <th>Total (MAD)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Les transactions seront ajoutées ici -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3">Total HT</th>
+                <th id="totalHT">0 MAD</th>
+                <th></th>
+            </tr>
+            <tr>
+                <th colspan="3">Total TTC</th>
+                <th id="totalTTC">0 MAD</th>
+                <th></th>
+            </tr>
+        </tfoot>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
