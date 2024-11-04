@@ -1,0 +1,25 @@
+body {
+    background-color: #343a40;
+    font-family: Arial, sans-serif;
+}
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.contact-form h2 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+.form-group label {
+    font-weight: bold;
+}
+.btn-send {
+    background-color: #343a40;
+    color: #fff;
+    font-weight: bold;
+}
