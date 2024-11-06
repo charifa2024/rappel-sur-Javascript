@@ -1,6 +1,6 @@
 // Validation du nom
 function validateName() {
-    const name = document.getElementById("name").value.trim();
+    const name = document.getElementById("name").value;
     const nameError = document.getElementById("nameError");
     nameError.innerText = ""; // Réinitialise le message d'erreur
 
@@ -13,7 +13,7 @@ function validateName() {
 
 // Validation de l'email
 function validateEmail() {
-    const email = document.getElementById("email").value.trim();
+    const email = document.getElementById("email").value;
     const emailError = document.getElementById("emailError");
     emailError.innerText = ""; // Réinitialise le message d'erreur
 
@@ -27,7 +27,7 @@ function validateEmail() {
 
 // Validation du téléphone
 function validatePhone() {
-    const phone = document.getElementById("phone").value.trim();
+    const phone = document.getElementById("phone").value;
     const phoneError = document.getElementById("phoneError");
     phoneError.innerText = ""; // Réinitialise le message d'erreur
 
@@ -40,7 +40,7 @@ function validatePhone() {
 
 // Validation du message
 function validateMessage() {
-    const message = document.getElementById("message").value.trim();
+    const message = document.getElementById("message").value ;
     const messageError = document.getElementById("messageError");
     messageError.innerText = ""; // Réinitialise le message d'erreur
 
