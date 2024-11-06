@@ -1,7 +1,21 @@
+function getPrixProduit(product) {
+    switch (product) {
+        case "Sac à main":
+            return 150;
+        case "Chemise":
+            return 100;
+        case "Pantalon":
+            return 100;
+        case "Cravate":
+            return 50;
+        default:
+            return 0;
+    }
+}
+
 function addTransaction() {
-    const productSelect = document.getElementById('product');
-    const product = productSelect.options[productSelect.selectedIndex].text;
-    const price = parseFloat(productSelect.options[productSelect.selectedIndex].dataset.price);
+    const product = document.getElementById("product").value;
+    const price = getPrixProduit(product);
     const quantity = parseInt(document.getElementById('quantity').value);
     const tva = parseFloat(document.getElementById('tva').value);
 
@@ -27,8 +41,8 @@ function addTransaction() {
 }
 
 function deleteTransaction(button) {
-    const row = button.parentNode.parentNode;
-    row.parentNode.removeChild(row);
+    const row = button.closest('tr');  // Utilisation de `closest('tr')` pour trouver la ligne parente
+    row.remove();
     const tva = parseFloat(document.getElementById('tva').value);
     updateTotals(tva);
 }
