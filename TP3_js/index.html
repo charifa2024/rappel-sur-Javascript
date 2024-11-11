@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QCM Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Titre principal de la page -->
+  <h1>English Knowledge Quiz</h1>
+  <div id="quiz">
+    <!-- Première question -->
+    <div class="question">
+      <p>What is the capital of Morocco?</p>
+      <!-- Bouton pour lire la question à voix haute (fonction JavaScript appelée) -->
+      <button onclick="readQuestion('What is the capital of Morocco?')">Read Question</button>
+      <!-- Choix de réponses pour la première question -->
+      <label><input type="radio" name="q1" value="Rabat"> Rabat</label>
+      <label><input type="radio" name="q1" value="Casablanca"> Casablanca</label>
+      <label><input type="radio" name="q1" value="Marrakech"> Marrakech</label>
+    </div>
+    <!-- Deuxième question -->
+    <div class="question">
+      <p>Which language is spoken in Brazil?</p>
+      <button onclick="readQuestion('Which language is spoken in Brazil?')">Read Question</button>
+      <!-- Choix de réponses pour la deuxième question -->
+      <label><input type="radio" name="q2" value="Portuguese"> Portuguese</label>
+      <label><input type="radio" name="q2" value="Spanish"> Spanish</label>
+      <label><input type="radio" name="q2" value="English"> English</label>
+    </div>
+    <!-- Troisième question -->
+    <div class="question">
+      <p>What is the capital of France?</p>
+      <button onclick="readQuestion('What is the capital of France?')">Read Question</button>
+      <!-- Choix de réponses pour la troisième question -->
+      <label><input type="radio" name="q3" value="Lyon"> Lyon</label>
+      <label><input type="radio" name="q3" value="Marseille"> Marseille</label>
+      <label><input type="radio" name="q3" value="Paris"> Paris</label>
+    </div>
+    <!-- Quatrième question -->
+    <div class="question">
+      <p>Which language is spoken in Spain?</p>
+      <button onclick="readQuestion('Which language is spoken in Spain?')">Read Question</button>
+      <!-- Choix de réponses pour la quatrième question -->
+      <label><input type="radio" name="q4" value="Portuguese"> Portuguese</label>
+      <label><input type="radio" name="q4" value="Spanish"> Spanish</label>
+      <label><input type="radio" name="q4" value="English"> English</label>
+    </div>
+    <!-- Bouton pour soumettre le quiz -->
+    <button onclick="submitQuiz()">Submit</button>
+  </div>
+  <!-- Section pour afficher le résultat du quiz -->
+  <div id="result"></div>
+  <!-- Paramètres de personnalisation de la page -->
+  <div id="settings">
+    <h2>Customize Page</h2>
+    <!-- Sélecteur de couleur de fond -->
+    <label>Background Color:
+      <input type="color" id="bgColor" onchange="changeBgColor()">
+    </label>
+    <!-- Sélecteur de couleur du texte -->
+    <label>Text Color:
+      <input type="color" id="textColor" onchange="changeTextColor()">
+    </label>
+    <!-- Sélecteur de taille de texte -->
+    <label>Text Size:
+      <input type="range" id="textSize" min="10" max="30" value="16" onchange="changeTextSize()">
+    </label>
+  </div>
+  <!-- Lien vers le fichier JavaScript qui gère les fonctionnalités interactives -->
+  <script src="script.js"></script>
+</body>
+</html>

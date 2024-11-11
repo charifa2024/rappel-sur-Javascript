@@ -1,0 +1,33 @@
+/* Applique une police de caractères générale pour le corps de la page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; 
+  color: #333; 
+}
+/* Stylisation de la section du quiz */
+#quiz {
+  margin: 20px;
+}
+/* Stylisation de chaque question */
+.question {
+  margin-bottom: 20px;
+}
+/* Stylisation des labels (pour les choix de réponse) */
+label {
+  display: block;
+  margin: 5px 0;
+}
+/* Stylisation de la section de personnalisation de la page (settings) */
+#settings {
+  margin-top: 30px;
+}
+/* Effet au survol des boutons radio */
+input[type="radio"]:hover {
+  background-color: #cce7ff;
+}
+
+/* Stylisation des boutons radio lorsqu'ils sont cochés */
+input[type="radio"]:checked {
+  background-color: #cce7ff;
+  border-radius: 5px; 
+}
