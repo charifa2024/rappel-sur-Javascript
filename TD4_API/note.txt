@@ -1,0 +1,30 @@
+hour=data.hourly.hour;
+time=new date(hour);
+year=ttime.getFullYear();
+month=time.getMonth()+1;
+day=time.getDay();
+hour=time.getHour();
+minutes=time.getMinutes();
+
+function affiche (){
+    for(var i=0;i<24;i=i+3){
+        html+='
+        <div class="Weather_hour">
+        <p>${hour[i].slice(11,16)}</p>
+        <p>${temperature[i]}°C</p>
+        <p>${cloudcover[i]}</p>
+        <p>${windspeed[i]}</p>
+        </div>
+
+        document.getElementById("result").innerHTML=html;
+    }
+}
+
+const url="https://api.open-meteo.com/v1/forecast?latitude=36.75&longitude=3.05&hourly=temperature_2m,precipitation,windspeed_10m,winddirection_10m,weathercode";
+const response=await fetch(url);
+const data=await response.json();
+const temperature=data.hourly.temperature_2m;
+const precipations=data.hourly.precipitation;
+const windspeeds=data.hourly.windspeed_10m;
+const windDirections=data.hourly.winddirection_10m;
+const WeatherCodes=data.hourly.weathercode;

@@ -1,0 +1,16 @@
+.weather-hour {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.weather-hour:hover {
+    background-color: #f0f8ff;
+    transform: translateY(-5px);
+    transition: transform 0.3s, background-color 0.3s;
+}
+.weather-icon {
+    font-size: 30px;
+}
+
